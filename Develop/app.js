@@ -63,7 +63,7 @@ function getEmployeeInformation() {
           },
           {
             type: "confirm",
-            name: "newemployee",
+            name: "newEmployee",
             message: "Enter another employee?",
           },
         ])
@@ -75,7 +75,7 @@ function getEmployeeInformation() {
             engineerAnswers.github
           );
           employees.push(engineer);
-          if (engineerAnswers.newemployee) {
+          if (engineerAnswers.newEmployee) {
             getEmployeeInformation();
           } else {
             generatePage();
@@ -91,7 +91,7 @@ function getEmployeeInformation() {
           },
           {
             type: "confirm",
-            name: "newemployee",
+            name: "newEmployee",
             message: "Enter another employee?",
           },
         ])
@@ -103,7 +103,7 @@ function getEmployeeInformation() {
             internAnswers.school
           );
           employees.push(intern);
-          if (internAnswers.newemployee) {
+          if (internAnswers.newEmployee) {
             getEmployeeInformation();
           } else {
             generatePage();
