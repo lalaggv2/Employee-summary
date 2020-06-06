@@ -7,7 +7,6 @@ const fs = require("fs");
 
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
-console.log(outputPath);
 const render = require("./lib/htmlRenderer");
 
 const employees = [];
@@ -36,7 +35,7 @@ function getEmployeeInformation() {
           },
           {
             type: "confirm",
-            name: "newemployee",
+            name: "newEmployee",
             message: "Enter another employee?",
           },
         ])
@@ -48,7 +47,7 @@ function getEmployeeInformation() {
             managerAnswers.officeNumber
           );
           employees.push(manager);
-          if (managerAnswers.newemployee) {
+          if (managerAnswers.newEmployee) {
             getEmployeeInformation();
           } else {
             generatePage();
